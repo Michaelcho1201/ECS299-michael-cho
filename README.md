@@ -20,7 +20,7 @@ Higher difficulty creates stronger, more strategic Pokémon teams. Lower difficu
   - Contains the existing difficulty adjustment function
   - Contains the existing LLM team generation function
   - Runs simple test calls
-  - Current model serves as potential prototype/baseline. Future changes (for example giving hints of type effectiveness at beginner level, or refining the scoring function may be necessary). 
+  - Current model serves as potential prototype/baseline. Future changes (for example giving hints of type effectiveness at beginner level, or refining the scoring function may be necessary).  ALSO MAY ADD GIMMICKS (mega/ tera/ z move/ gigantamax etc) 
 - `player_team.py` 
     - Currently has a preset generally balanaced team. 
     - MAY  PLAN TO UPDATE THIS TO ASK FOR AN INPUT TEAM WITH LEGALITY CHECKS. 
