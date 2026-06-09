@@ -1,5 +1,6 @@
 import os
 from openai import OpenAI
+import json
 
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY").strip())
 def adjust_difficulty(difficulty_level: int, player_won: bool, moves: int) -> int:
@@ -57,12 +58,55 @@ def generate_pokemon_team(difficulty_level: int) -> str:
     Higher difficulty means stronger synergy, more advanced strategy, and more competitive picks.
     Lower difficulty means simpler, more forgiving, beginner-friendly picks.
 
-    Return:
-    - 6 Pokémon
-    - role for each
-    - item, ability, nature, EVs, and 4 moves
-    - short explanation of how the team plays
-    """ .strip()
+    Return valid JSON only.
+
+    Each Pokémon must use this exact format:
+
+    [
+    {{
+        "name": "",
+        "types": ["Type1"],
+        "current_hp": 100,
+        "max_hp": 100,
+        "role": "",
+        "item": "",
+        "ability": "",
+        "nature": "",
+        "evs": "",
+        "moves": [
+        {{
+            "name": "",
+            "type": "",
+            "power": 0
+        }},
+        {{
+            "name": "",
+            "type": "",
+            "power": 0
+        }},
+        {{
+            "name": "",
+            "type": "",
+            "power": 0
+        }},
+        {{
+            "name": "",
+            "type": "",
+            "power": 0
+        }}
+        ]
+    }}
+    ]
+
+    Rules:
+    - Return exactly 6 Pokémon.
+    - Include one or two Pokémon types in the "types" list.
+    - Keep power information for every damaging move.
+    - If a move does no direct damage, set "power" to 0.
+    - Include the type of every move.
+    - Do not include markdown.
+    - Do not include explanation outside the JSON.
+    """.strip()
     print(prompt)
 
     response = client.responses.create(
@@ -70,8 +114,4 @@ def generate_pokemon_team(difficulty_level: int) -> str:
         input=prompt
     )
 
-    return response.output_text
-test1 = adjust_difficulty(5,True,20)
-print("new level at ", test1)
-test2 = generate_pokemon_team(0)
-print(test2)
+    return json.loads(response.output_text)
