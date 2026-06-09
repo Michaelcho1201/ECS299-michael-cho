@@ -38,8 +38,10 @@ Higher difficulty creates stronger, more strategic Pokémon teams. Lower difficu
   
 -`game_loop.py`
     -contols the battle and wins, asking if player wants ot play again or not. if yes begins new battle.
+    
 -`type_chart.py`
     - self explainatory. contains the current type chart with supereffective, not really effective, and regular effective with basic damage calculations including       for dual types
+    
 -`move_analysis.py`
     - determines which moves are supereffective per active pokemon that the ai can use.  
 ## How Difficulty Works CURRENTLY 
@@ -55,11 +57,13 @@ If the battle takes more than 80 moves, only a small base adjustment is applied.
 
 ## Required Setup
 
+**NOTE DIFFICULTY AND LLM BATTLE CONTROLLER CONTAIN VARIABLE THAT REPRESENTS OPEN API KEY IF YOU ARE HAVING ISSUES WITH OPEN API KEY MAY NEED TO MODIFIY THOSE TWO.** 
+
 Install the OpenAI package:
 
 ```bash
 pip install openai
-**NOTE DIFFICULTY AND LLM BATTLE CONTROLLER CONTAIN VARIABLE THAT REPRESENTS OPEN API KEY IF YOU ARE HAVING ISSUES WITH OPEN API KEY MAY NEED TO MODIFIY THOSE TWO.** 
+
 
 ## FUTURE WORK NEEDED:
 OTHER STATS BESIDES HP, SPECIAL EFFECTS OF MOVES, STAB, HELD ITEMS, ABILITIES. **
