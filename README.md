@@ -31,19 +31,19 @@ Higher difficulty creates stronger, more strategic Pokémon teams. Lower difficu
     - MAY PLAN TO UPDATE THIS TO HANDLE DOUBLE BATTLES.
     - 
 -`battle_loop.py`
-    -controls the turn of the battle, printing out relevant information
+  -controls the turn of the battle, printing out relevant information
   
 -`llm_battle_controller.py`
-    - controls the AI aspect of the battle
+  - controls the AI aspect of the battle
   
 -`game_loop.py`
-    -contols the battle and wins, asking if player wants ot play again or not. if yes begins new battle.
+  -contols the battle and wins, asking if player wants ot play again or not. if yes begins new battle.
     
 -`type_chart.py`
-    - self explainatory. contains the current type chart with supereffective, not really effective, and regular effective with basic damage calculations including       for dual types
+  - self explainatory. contains the current type chart with supereffective, not really effective, and regular effective with basic damage calculations including       for dual types
     
 -`move_analysis.py`
-    - determines which moves are supereffective per active pokemon that the ai can use.  
+  - determines which moves are supereffective per active pokemon that the ai can use.  
 ## How Difficulty Works CURRENTLY 
 
 If the player wins, the difficulty increases.
@@ -53,6 +53,9 @@ If the player loses, the difficulty decreases.
 If the battle takes fewer moves, the difficulty changes more strongly.
 
 If the battle takes more than 80 moves, only a small base adjustment is applied.
+
+## FUTURE WORK NEEDED:
+OTHER STATS BESIDES HP, SPECIAL EFFECTS OF MOVES, STAB, HELD ITEMS, ABILITIES.
 
 
 ## Required Setup
@@ -65,5 +68,3 @@ Install the OpenAI package:
 pip install openai
 
 
-## FUTURE WORK NEEDED:
-OTHER STATS BESIDES HP, SPECIAL EFFECTS OF MOVES, STAB, HELD ITEMS, ABILITIES. **
