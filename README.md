@@ -36,7 +36,7 @@ Higher difficulty creates stronger, more strategic Pokémon teams. Lower difficu
 -`llm_battle_controller.py`
     - controls the AI aspect of the battle
   
--`game_loop.py'
+-`game_loop.py`
     -contols the battle and wins, asking if player wants ot play again or not. if yes begins new battle.
 -`type_chart.py`
     - self explainatory. contains the current type chart with supereffective, not really effective, and regular effective with basic damage calculations including       for dual types
