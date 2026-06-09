@@ -7,6 +7,8 @@ The player uses their own team of 6 Pokémon. After each battle, the system adju
 
 Higher difficulty creates stronger, more strategic Pokémon teams. Lower difficulty creates simpler and more forgiving teams.
 
+**WARNING CHOOSING A NUMBER OUTSIDE THE RANGE CURRENTLY CAUSES ERROR MESSAGE AND CRASHES BATTLER WILL IMPLEMENT REDIRECT SOON**
+
 ## Current Features
 
 - Adjusts difficulty after each battle
