@@ -63,3 +63,14 @@ Install the OpenAI package:
 pip install openai
 
 
+## AGENT B
+Agent B is a modified version of the original code that uses pokeapi dataset to ensure that both player and ai teams are valid, forcing a regeneration of ai team if not valid and for player side, preventing the player from playing until team is valid. Agent B has proven to be more accurate than base code, with surprisingly minimal time loss.
+Future work:
+Agent C: model trained on pokeapi dataset
+Agent D": model trained on pokeapi dataset and uses pokeapi dataset to check
+Implement rest of battle mechanics to agents a and B
+Future future work
+Agent E: return simulation log and generated teams from most accurate agent as a dataset and train with that
+
+
+
